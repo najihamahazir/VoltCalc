@@ -1,0 +1,12 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Assignment_NajihaMahazir" parent="Theme.Material3.DayNight.NoActionBar">
+
+            <item name="colorPrimary">@color/darkblue</item>
+            <item name="colorPrimaryDark">@color/darkblue</item>
+        <item name="android:statusBarColor">@color/darkblue</item>
+
+    </style>
+
+    <style name="Theme.Assignment_NajihaMahazir" parent="Base.Theme.Assignment_NajihaMahazir" />
+</resources>
