@@ -2,7 +2,8 @@ package com.example.assignment_najihamahazir;
 
 import android.content.Intent;
 import android.os.Bundle;
-
+import android.net.Uri;
+import android.widget.TextView;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -14,6 +15,7 @@ public class AboutMeActivity extends AppCompatActivity {
 
     DrawerLayout drawerLayout;
     NavigationView navigationView;
+    TextView tvGitHubLink;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +54,13 @@ public class AboutMeActivity extends AppCompatActivity {
                 return true;
             }
             return false;
+        });
+
+        tvGitHubLink = findViewById(R.id.tvGitHubLink); // Make sure your TextView in about_me.xml has this ID
+        tvGitHubLink.setOnClickListener(v -> {
+            String githubUrl = "https://github.com/najihamahazir/VoltCalc"; // Replace with your actual GitHub link
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(githubUrl));
+            startActivity(intent);
         });
 
     }
